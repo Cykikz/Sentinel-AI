@@ -15,7 +15,7 @@ sentinelai/
 
 ## Current Status
 
-Implemented through Phase 14:
+Implemented through Phase 0 to Phase 14:
 
 - Phase 0: TypeScript monorepo foundation + Bob Shell connectivity.
 - Phase 1: Local SQLite memory system.
@@ -36,6 +36,7 @@ Implemented through Phase 14:
 Dashboard runs locally through `sentinel dashboard`. Silent watcher runs through `sentinel watch`.
 
 ## Commands
+- All usable and relevant commands 
 
 ```bash
 npm run typecheck
@@ -66,13 +67,9 @@ npm run release:check
 
 ## Demo
 
-See [DEMO.md](DEMO.md).
+Checkout [DEMO.md](DEMO.md) for demo details.
 
 ```bash
 node dist/cli/src/index.js dashboard --target demo
 node dist/cli/src/index.js scan --deep --demo --target demo
 ```
-
-## Submission
-
-See [SUBMISSION.md](SUBMISSION.md) and [BOB_SESSIONS.md](BOB_SESSIONS.md).
