@@ -1,0 +1,14 @@
+{
+  "name": "sentinelai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "sentinel": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

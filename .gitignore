@@ -1,0 +1,16 @@
+.env
+packages/backend/.env
+packages/frontend/.env.local
+.env.*
+.env.*.local
+.sentinel/
+dist/
+node_modules/
+npm-debug.log*
+sentinel-report.md
+.next/
+out/
+*.log
+coverage/
+.eslintcache
+.turbo/

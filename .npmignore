@@ -1,0 +1,17 @@
+.env
+.sentinel/
+node_modules/
+npm-debug.log*
+*.tgz
+
+demo/.git/
+demo/.sentinel/
+demo/sentinel-report.md
+
+packages/frontend/.next/
+packages/frontend/tsconfig.tsbuildinfo
+
+dist/**/*.map
+dist/**/*.d.ts.map
+
+bob-session/

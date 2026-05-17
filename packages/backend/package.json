@@ -1,0 +1,19 @@
+{
+  "name": "@sentinelai/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "db:setup": "tsx scripts/setup-db.ts",
+    "dev": "tsx src/server/index.ts",
+    "test:bob": "tsx scripts/test-bob.ts",
+    "test:bob:demo": "tsx scripts/test-bob.ts --demo",
+    "test:agents": "tsx scripts/test-core-agents.ts",
+    "test:compression": "tsx scripts/test-compression.ts",
+    "test:memory": "tsx scripts/test-memory.ts",
+    "test:scout": "tsx scripts/test-scout.ts",
+    "test:support": "tsx scripts/test-support-agents.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "sentinelai",
+  "version": "0.1.0",
+  "description": "Local-first repository intelligence runtime powered by IBM Bob.",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/backend",
+    "packages/frontend",
+    "cli"
+  ],
+  "bin": {
+    "sentinel": "./dist/cli/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:all": "powershell -ExecutionPolicy Bypass -File scripts/build.ps1",
+    "db:setup": "tsx packages/backend/scripts/setup-db.ts",
+    "dev": "tsx cli/src/index.ts",
+    "dev:frontend": "npm run dev -w packages/frontend",
+    "demo:check": "tsx packages/backend/scripts/demo-check.ts",
+    "judge:check": "tsx packages/backend/scripts/judge-check.ts",
+    "release:check": "powershell -ExecutionPolicy Bypass -File scripts/release.ps1",
+    "setup:local": "powershell -ExecutionPolicy Bypass -File scripts/setup.ps1",
+    "typecheck:frontend": "npm run typecheck -w packages/frontend",
+    "test:bob": "tsx packages/backend/scripts/test-bob.ts",
+    "test:bob:demo": "tsx packages/backend/scripts/test-bob.ts --demo",
+    "test:agents": "tsx packages/backend/scripts/test-core-agents.ts",
+    "test:confidence": "tsx packages/backend/scripts/test-confidence.ts",
+    "test:compression": "tsx packages/backend/scripts/test-compression.ts",
+    "test:git": "tsx packages/backend/scripts/test-git-intelligence.ts",
+    "test:queries": "tsx packages/backend/scripts/test-local-queries.ts",
+    "test:memory": "tsx packages/backend/scripts/test-memory.ts",
+    "test:scout": "tsx packages/backend/scripts/test-scout.ts",
+    "test:watcher": "tsx packages/backend/scripts/test-watcher.ts",
+    "test:support": "tsx packages/backend/scripts/test-support-agents.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "better-sqlite3": "^12.10.0",
+    "chokidar": "^5.0.0",
+    "commander": "^13.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "glob": "^13.0.6",
+    "ignore": "^7.0.5",
+    "simple-git": "^3.36.0",
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-javascript": "^0.21.4",
+    "tree-sitter-typescript": "^0.23.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

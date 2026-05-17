@@ -1,0 +1,13 @@
+FROM node:22-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY packages/frontend/package.json packages/frontend/package.json
+RUN npm ci -w packages/frontend
+
+COPY packages/frontend packages/frontend
+RUN npm run build -w packages/frontend
+
+EXPOSE 3000
+CMD ["npm", "run", "start", "-w", "packages/frontend", "--", "--hostname", "0.0.0.0", "--port", "3000"]
